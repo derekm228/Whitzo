@@ -14,6 +14,8 @@ $(document).ready(function(){
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
+		console.log(latitude);
+		console.log(longitude);
 	}
 
 	function showLocation(position) {
