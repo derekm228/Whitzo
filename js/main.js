@@ -16,15 +16,16 @@ $(document).ready(function(){
 			navigator.geolocation.getCurrentPosition(function(position) {
 				var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-				var infowindow = new google.maps.InfoWindow({
-					map: map,
+				var marker = new google.maps.Marker({
 					position: pos,
+					map: map
 				});
 
 				map.setCenter(pos);
-			}, function() {
+			}, 
+			function() {
 				handleNoGeolocation(true);
-				});
+			});
 		} 
 		else {
 	    	// Browser doesn't support Geolocation
