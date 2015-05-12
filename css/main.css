@@ -1,0 +1,634 @@
+/*! HTML5 Boilerplate v5.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ========================================================================== */
+/* CSS for all pages                                                          */
+/* ========================================================================== */
+
+html {
+    background: url(../img/home_background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    padding : 0;
+    margin : 0;
+    border : 0;
+}
+
+body {
+    background-size : auto;
+}
+
+/* ========================================================================== */
+/* CSS for the home page                                                      */
+/* ========================================================================== */
+
+#homePageH1 {
+    display: none;
+}
+
+#homePageContainer {
+    display : block;
+    width : 100%;
+    height: 100%;
+    overflow : hidden;
+}
+
+#homePageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#homePageLogo {
+    padding-top: 5%;
+    float : left;
+    clear : none;
+    height : 20%;
+    width : 100%;
+    text-align: center;
+}
+
+#homePageTagLine {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    float : left;
+    clear : none;
+    height : 10%;
+    width : 100%;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 24px;
+    color: #F0F0F0;
+}
+
+.homePageSide {
+    padding-top: 7%;
+    padding-bottom: 10%;
+    float : left;
+    clear : none;
+    height : 50%;
+    width : 49.75%;
+    text-align: center;
+    color: #F0F0F0;
+}
+
+#homePageVerticalLine {
+    margin-top: 4%;
+    padding-top: 20%;
+    float : left;
+    clear : none;
+    width : 0.4%;
+    border-right: 1px solid white;
+}
+
+.homePageSide h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #F0F0F0;
+    padding-bottom:1%;
+}
+
+.homePageSide p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    color: #F0F0F0;
+}
+
+.homePageSide input{
+    margin-top:5%;
+    padding:15px 25px 15px 25px;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background: none;
+    border: solid 1px #2A4E77;
+
+    -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.8), 2px 2px 2px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.8), 2px 2px 2px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.8), 2px 2px 2px rgba(0, 0, 0, 0.8);
+
+    outline:none;
+}
+
+.homePageSide input:hover{
+    background: #356094;
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+
+    outline:none;
+}
+
+.homePageSide input:active {
+    background: #2E5481;
+
+    -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.6);
+
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    transition-duration: 0.1s;
+    outline:none;
+}
+
+/* ========================================================================== */
+/* CSS for the footer of all pages                                            */
+/* ========================================================================== */
+
+.footer {
+   position: fixed;
+   float: left;
+   left:0px;
+   bottom:0px;
+   height:5%;
+   width:100%;
+   border-top: 2px solid white;
+   background-color: black;
+}
+
+#login {
+    float: left;
+    clear: none;
+    height: 38px;
+    width: 70%;
+    color: #F0F0F0;
+    text-align:left;
+    padding-top: 6px;
+}
+
+#memberText {
+    float: left;
+    clear: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: #F0F0F0;
+    width: 17%;
+    padding-top: 7px;
+    padding-left: 20px;
+}
+
+#memberInfo {
+    float: left;
+    clear: none;
+    width: 70%;
+}
+
+#shareImages {
+    float: left;
+    clear: none;
+    height: 40px;
+    width: 30%;
+    color: #F0F0F0;
+    text-align:right;
+}
+
+.footer input[type="text"], .footer input[type="button"], .footer input[type="password"] {
+    padding: 8px;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+    font-size: 12px;
+    color:black;
+}
+
+.footer input[type="text"]:focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+}
+
+/* ========================================================================== */
+/* CSS specific for the Apartment Listing Page                                */
+/* ========================================================================== */
+
+#listPageH1 {
+    display: none;
+}
+
+#listPageContainer {
+    height: 100%;
+    width: 100%;
+    margin: auto auto 0 auto;
+    position: fixed;
+}
+
+.header {
+    float: left;
+    height: 5%;
+    width: 100%;
+    border-bottom: 2px solid white;
+    background-color: black;
+}
+
+#backButton {
+    float: left;
+    clear: none;
+    text-align:left;
+    padding-left: 5px;
+    padding-top: 2px;
+}
+
+#backText {
+    float: left;
+    clear: none;
+    width: 10%;
+    text-align:left;
+    padding-top: 9px;
+    padding-left: 10px;
+    color: #F0F0F0;
+}
+
+#pageTitle {
+    float: left;
+    clear: none;
+    width: 40%;
+    text-align:left;
+    padding-top: 9px;
+    padding-left: 27%;
+    color: #F0F0F0;
+}
+
+.content {
+    float: left;
+    height: 90%;
+    width: 100%;
+}
+
+.leftSideBar {
+    height: 100%;
+    width: 15%;
+    float: left;
+    clear: none;
+    text-align: left;
+    color: #F0F0F0;
+    padding-top: 1%;
+    padding-left: 2%;
+}
+
+.leftSideBar li {
+    list-style-type: none;
+    line-height: 40px;
+    font-size: 22px;
+    font-family: 'Francois One', sans-serif;
+}
+
+.leftSideBar a:link {
+    color: #839CA5;
+    text-decoration: none;
+}
+
+.leftSideBar a:visited {
+    color: #839CA5;
+    text-decoration: none;
+}
+
+.leftSideBar a:hover {
+    color: #F0F0F0;
+    text-decoration: none;
+}
+
+.leftSideBar a:active {
+    color: #839CA5;
+    text-decoration: none;
+}
+
+#listMyApartmentContent {
+    float: left;
+    clear: none;
+    height: 100%;
+    width: 75%;
+    text-align: left;
+    color: #F0F0F0;
+    border-left: 2px solid white;
+    overflow-y: scroll;
+    padding-top: 2%;
+    padding-left: 3%;
+}
+
+#listMyApartmentContent h2 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 44px;
+    color: #F0F0F0;
+    padding-bottom: 2%;
+}
+
+.listSection {
+    width: 100%;
+    padding-bottom:5%;
+}
+
+.listSection form {
+    padding-bottom: 1%;
+}
+
+#map-section {
+    min-height: 450px;
+    /*min-width: 400px;
+   /* width: 100%;
+    height: 100%; */
+}
+
+.listInfo {
+    border-bottom: 2px solid white;
+}
+
+
+ul .checkboxGroup  { 
+  margin: 0; 
+  padding: 0; 
+  margin-left: 20px; 
+  list-style: none; 
+} 
+
+ul .checkboxGroup li input { 
+  margin-right: .25em; 
+} 
+
+ul .checkboxGroup li { 
+  border: 1px transparent solid; 
+  display:inline-block;
+  width:12em;
+} 
+
+ul .checkboxGroup li label { 
+  margin-left: ;
+} 
+
+ul .checkboxGroup li:hover, ul.checkboxGroup li.focus  { 
+  background-color: yellow; 
+  border: 1px gray solid; 
+  width: 12em; 
+} 
+
+
+/* ==========================================================================
+   Hide the scrollbar
+   ========================================================================== */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

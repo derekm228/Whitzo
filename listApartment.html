@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Whitzo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/dropzone.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,700,100' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <h1 id="listPageH1">Whitzo -- Find or list your apartments without fees and brokers</h1>
+
+        <div id="listPageContainer">
+            <div class="header">
+                <div id="backButton">
+                    <a href="file:///Users/dmill/Sites/GeneralAssembly/Project/index.html">
+                        <img src="img/back_button.png" alt="Back to Home" height="40" width="40">
+                    </a>
+                </div>
+                <div id="backText">
+                    <h3>Whitzo</h3>
+                </div>
+                <div id="pageTitle">
+                    <h3>List My Apartment</h3>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="leftSideBar">
+                    <ul>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#price">Price</a></li>
+                        <li><a href="#availability">Availability</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                        <li><a href="#pictures">Pictures</a></li>
+                        <li><a href="#contract">Contract</a></li>
+                        <li><a href="#additionalInfo">Additional Info</a></li>
+                    </ul>
+                </div>
+
+                <div id="listMyApartmentContent">
+                    <div class="listSection" id="location">
+                        <h2>Location</h2>
+                        <form class="listFormSection">
+                            <fieldset class="listInfo">
+                                <input type="text" id="address" placeholder="Address">
+                                <input type="text" id="apartment" placeholder="Apartment/Suite">
+                                <input type="text" id="city" placeholder="City">
+                                <input type="text" id="state" placeholder="State">
+                            </fieldset>
+                        </form>
+                        <div id="map-section"></div>
+                    </div>
+
+                    <div class="listSection" id="price">
+                        <h2>Price</h2>
+                        <form class="listFormSection">
+                            <fieldset class="listInfo">
+                                <input type="number" id="priceInput">
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="listSection" id="availability">
+                        <h2>Availability</h2>
+                        <form class="listFormSection">
+                            <fieldset class="listInfo">
+                                <input type="text" id="moveIn" name="moveIn">
+                                <input type="text" id="moveOut" name="moveOut">
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="listSection" id="amenities">
+                        <h2>Pictures</h2>
+                        <form class="listFormSection">
+                            <fieldset class="listInfo">
+                                <table style="width:80%">
+                                    <tr>
+                                        <td><input type="checkbox" id="washerDryer" value="washerDryer" /><label for="washerDryer">Washer / Dryer</label></td>
+                                        <td><input type="checkbox" id="dishwasher" value="dishwasher" /><label for="dishwasher">Dishwasher</label></td> 
+                                        <td><input type="checkbox" id="utilitiesIncluded" value="utilitiesIncluded" /><label for="utilitiesIncluded">Utilities Included</label></td>
+                                        <td><input type="checkbox" id="parking" value="parking" /><label for="parking">Parking</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="outdoorSpace" value="outdoorSpace" /><label for="outdoorSpace">Outdoor Space</label></td>
+                                        <td><input type="checkbox" id="pool" value="pool" /><label for="pool">Pool</label></td> 
+                                        <td><input type="checkbox" id="porch" value="porch" /><label for="porch">Porch</label></td>
+                                        <td><input type="checkbox" id="centralAir" value="centralAir" /><label for="centralAir">Central Air</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="fitnessCenter" value="fitnessCenter" /><label for="fitnessCenter">Fitness Center</label></td>
+                                        <td><input type="checkbox" id="storageSpace" value="storageSpace" /><label for="storageSpace">Storage Space</label></td> 
+                                        <td><input type="checkbox" id="bikeFriendly" value="bikeFriendly" /><label for="bikeFriendly">Bike Friendly</label></td>
+                                        <td><input type="checkbox" id="concierge" value="concierge" /><label for="concierge">Concierge</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" id="petFriendly" value="petFriendly" /><label for="petFriendly">Pet Friendly</label></td>
+                                        <td><input type="checkbox" id="wifi" value="wifi" /><label for="wifi">Wi-Fi</label></td> 
+                                        <td><input type="checkbox" id="ceilingFans" value="ceilingFans" /><label for="ceilingFans">Ceiling Fans</label></td>
+                                        <td><input type="checkbox" id="fireplace" value="fireplace" /><label for="fireplace">Fireplace</label></td>
+                                    </tr>
+                                </table>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="listSection" id="pictures">
+                        <h2>Pictures</h2>
+                        <form class="listFormSection dropzone" action="file-upload">
+                        </form>
+                    </div>
+
+                    <div class="listSection" id="contract">
+                        <h2>Contract</h2>
+                        <form class="listFormSection">
+                            <fieldset class="listInfo">
+                                <input type="text" id="moveIn" name="moveIn">
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div class="listSection" id="additionalInfo">
+                        <h2>Additional Info</h2>
+                        <form class="listFormSection">
+                            <fieldset class="listInfo">
+                                <input type="textarea" id="moreInfo" name="moreInfo">
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div id="login">
+                    <div id="memberText">
+                        <h4>Already a member?</h4>
+                    </div>
+                    <div id="memberInfo">
+                        <input type="text" id="username" placeholder="Username/Email">
+                        <input type="password" id="password" placeholder="Password">
+                        <input type="button" id="loginButton" value="Login">
+                    </div>
+                </div>
+                <div id="shareImages">
+                    <input type="image" src="img/facebook.png" alt="Submit">
+                    <input type="image" src="img/twitter.png" alt="Submit">
+                    <input type="image" src="img/pinterest.png" alt="Submit">
+                    <input type="image" src="img/linkedin.png" alt="Submit">
+                </div>
+            </div>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/dropzone.js"></script>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+
+    </body>
+</html>
