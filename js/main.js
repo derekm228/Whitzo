@@ -4,53 +4,38 @@ $(document).ready(function(){
 
 	//Define functions
 	var map;
-	var latitude;
-	var longitude;
+	var latitude = 0;
+	var longitude = 0;
+	console.log(latitude);
+	console.log(longitude);
 
 	function initialize() {
-		var mapOptions = {
-		zoom: 8,
-		geoLocation();
-		center: new google.maps.LatLng(latitude, longitude),
-		mapTypeId: google.maps.MapTypeId.ROADMAP
+
+		function success(position) {
+			latitude  = position.coords.latitude;
+			longitude = position.coords.longitude;
+			console.log(latitude);
+			console.log(longitude);
 		};
+
+		function error() {
+			console.log(latitude);
+			console.log(longitude);
+		};
+
+		navigator.geolocation.getCurrentPosition(success, error);
+
+		var mapOptions = {
+			zoom: 8,
+			center: new google.maps.LatLng(latitude, longitude),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+
 		map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
-		console.log(latitude);
-		console.log(longitude);
-	}
-
-	function showLocation(position) {
-		var latitude = position.coords.latitude;
-		var longitude = position.coords.longitude;
-   }
-
-	function errorHandler(err) {
-   		if(err.code == 1) {
-			alert("Error: Access is denied!");
-		}
-		else if( err.code == 2) {
-			alert("Error: Position is unavailable!");
-		}
-	}
-
-	function getLocation(){
-
-		if(navigator.geolocation){
-		// timeout at 60000 milliseconds (60 seconds)
-			var options = {timeout:60000};
-			navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
-		}
-		else{
-			alert("Sorry, browser does not support geolocation!");
-		}
 	}
 
 	google.maps.event.addDomListener(window, 'load', initialize);
 
-  //Event listeners
-
-
-
-
+	//Event listeners
 
 });
