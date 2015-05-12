@@ -9,7 +9,7 @@ $(document).ready(function(){
 			zoom: 6
 		};
 	
-		map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+		map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
 
 		// Try HTML5 geolocation
 		if(navigator.geolocation) {
@@ -55,4 +55,3 @@ $(document).ready(function(){
 	google.maps.event.addDomListener(window, 'load', initialize);
 
 });
-
