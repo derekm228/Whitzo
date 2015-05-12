@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 /*------------------------------------------ANIMATE SCROLLING WHEN SELECTING LINKS------------------------------------------*/
 
-	$('a').on('click', function() {
+	$('.leftSideBar a').on('click', function() {
     	$.smoothScroll({
       		scrollElement: $('#listMyApartmentContent'),
       		scrollTarget: $(this).attr("href"),
