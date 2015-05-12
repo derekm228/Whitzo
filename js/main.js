@@ -6,7 +6,7 @@ $(document).ready(function(){
 	//Define functions
 	function initialize() {
 		var mapOptions = {
-			zoom: 6
+			zoom: 8
 		};
 	
 		map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
