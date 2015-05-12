@@ -10,6 +10,7 @@ $(document).ready(function(){
 	function initialize() {
 		var mapOptions = {
 		zoom: 8,
+		geoLocation();
 		center: new google.maps.LatLng(latitude, longitude),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
@@ -44,7 +45,6 @@ $(document).ready(function(){
 		}
 	}
 
-	getLocation();
 	google.maps.event.addDomListener(window, 'load', initialize);
 
   //Event listeners
