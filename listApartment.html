@@ -11,8 +11,9 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/dropzone.css">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,700,100' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -69,22 +70,31 @@
                         <form class="listFormSection">
                             <fieldset class="listInfo">
                                 <input type="number" id="priceInput">
+                                <select>
+                                    <option value="month">Week</option>
+                                    <option value="month">Month</option>
+                                    <option value="quarter">Quarter</option>
+                                    <option value="half">Half</option>
+                                    <option value="year">Year</option>
+                                </select>
                             </fieldset>
                         </form>
                     </div>
 
                     <div class="listSection" id="availability">
                         <h2>Availability</h2>
-                        <form class="listFormSection">
-                            <fieldset class="listInfo">
-                                <input type="text" id="moveIn" name="moveIn">
-                                <input type="text" id="moveOut" name="moveOut">
-                            </fieldset>
-                        </form>
+                        <div id="moveIn">
+                            <h3>Select the Move-In Date</h3>
+                            <input id="moveInDate" name="moveInDate">
+                        </div>
+                        <div id="moveOut">
+                            <h3>Select the Move-Out Date</h3>
+                            <input id="moveOutDate" name="moveOutDate">
+                        </div>
                     </div>
 
                     <div class="listSection" id="amenities">
-                        <h2>Pictures</h2>
+                        <h2>Amenities</h2>
                         <form class="listFormSection">
                             <fieldset class="listInfo">
                                 <table style="width:80%">
@@ -167,6 +177,8 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/dropzone.js"></script>
+        <script src="js/datepicker.js"></script>
+        <script src="js/jquery-smooth-scroll.js"></script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

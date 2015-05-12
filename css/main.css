@@ -411,11 +411,33 @@ body {
 
 .listSection {
     width: 100%;
+    padding-top: 2%;
     padding-bottom:5%;
 }
 
 .listSection form {
     padding-bottom: 1%;
+}
+
+#availability {
+    min-height: 370px;
+}
+
+#moveIn, #moveOut {
+    float: left;
+    clear: none;
+    min-width: 300px;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    font-style: italic;
+    text-align: left;
+    padding-bottom:5%;
+}
+
+#moveIn input, #moveOut input {
+    visibility: hidden;
 }
 
 #map-section {
@@ -425,10 +447,9 @@ body {
     height: 100%; */
 }
 
-.listInfo {
-    border-bottom: 2px solid white;
+.dropzone {
+    min-height: 400px;
 }
-
 
 ul .checkboxGroup  { 
   margin: 0; 

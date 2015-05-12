@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+/*------------------------------------------MAPS SPECIFIC START CODE------------------------------------------*/
+
 	//Initialize global variables
 	var map;
 
@@ -53,5 +55,37 @@ $(document).ready(function(){
 
 	//Event listeners
 	google.maps.event.addDomListener(window, 'load', initialize);
+
+/*------------------------------------------MAPS SPECIFIC END CODE------------------------------------------*/
+
+/*------------------------------------------CALENDAR SPECIFIC START CODE------------------------------------------*/
+
+	datePickerController.createDatePicker({
+    formElements: {
+        "moveInDate": "%d/%m/%Y"
+    },
+    // Position the activation button within the span
+    nopopup: true
+});
+	datePickerController.createDatePicker({
+    formElements: {
+        "moveOutDate": "%d/%m/%Y"
+    },
+    // Position the activation button within the span
+    nopopup: true
+});
+
+/*------------------------------------------CALENDAR SPECIFIC END CODE------------------------------------------*/
+
+/*------------------------------------------ANIMATE SCROLLING WHEN SELECTING LINKS------------------------------------------*/
+
+	$('a').on('click', function() {
+    	$.smoothScroll({
+      		scrollElement: $('#listMyApartmentContent'),
+      		scrollTarget: $(this).attr("href"),
+      		speed: 1000
+    	});
+    	return false;
+  	});
 
 });
