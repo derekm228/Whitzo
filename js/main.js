@@ -6,7 +6,7 @@ $(document).ready(function(){
 	//Define functions
 	function initialize() {
 		var mapOptions = {
-			zoom: 8
+			zoom: 12
 		};
 	
 		map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
@@ -19,7 +19,6 @@ $(document).ready(function(){
 				var infowindow = new google.maps.InfoWindow({
 					map: map,
 					position: pos,
-					content: 'Location found using HTML5.'
 				});
 
 				map.setCenter(pos);
