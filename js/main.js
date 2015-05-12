@@ -19,11 +19,12 @@ $(document).ready(function(){
 		};
 
 		function error() {
-			console.log(latitude);
-			console.log(longitude);
+			// It's not going to fail!
 		};
 
 		navigator.geolocation.getCurrentPosition(success, error);
+		console.log(latitude);
+		console.log(longitude);
 
 		var mapOptions = {
 			zoom: 8,
@@ -31,10 +32,17 @@ $(document).ready(function(){
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 
+		console.log(latitude);
+		console.log(longitude);
+
 		map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
+		console.log(latitude);
+		console.log(longitude);
 	}
 
 	google.maps.event.addDomListener(window, 'load', initialize);
+	console.log(latitude);
+	console.log(longitude);
 
 	//Event listeners
 
