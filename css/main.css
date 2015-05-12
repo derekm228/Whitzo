@@ -96,7 +96,7 @@ textarea {
 /* ========================================================================== */
 
 html {
-    background: url(../img/home_background.jpg) no-repeat center center fixed;
+    background: url(../img/home_background-min.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }
