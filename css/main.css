@@ -257,10 +257,6 @@ body {
 
 #login h3 {
     visibility: hidden;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-    color: #F0F0F0;
     padding-top: 1%;
     padding-left: 1%;
 }
