@@ -230,8 +230,13 @@ $(document).ready(function(){
 /*------------------------------------------RICH TEXT EDITOR------------------------------------------*/
 	
 	// Enable CKEditor
-	CKEDITOR.replace('moreInfo');
-	CKEDITOR.config.height = '35em';
+	if($("#listMyApartmentContent").length > 0) {
+		CKEDITOR.replace('moreInfo');
+		CKEDITOR.config.height = '35em';
+	}
+
+
+/*------------------------------------------APARTMENT PREVIEW SLIDER------------------------------------------*/
 
 });
 

@@ -18,8 +18,11 @@
         <link rel="stylesheet" href="css/dropzone.css">
         <link rel="stylesheet" href="css/datepicker.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
+
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,700,100' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8&libraries=places" type="text/javascript"></script>
         <script src="https://apis.google.com/js/client:platform.js" async defer></script>
@@ -47,7 +50,7 @@
                 </div>
                 <div id="forwardHeader">
                     <div id="submitListing">
-                        <a href="previewListing.html">
+                        <a href="listApartment.html">
                             <img src="img/forward_button.png" alt="Submit" height="40" width="40">
                         </a>
                     </div>
@@ -61,7 +64,7 @@
                 <div class="leftSideBar">
                     <ul>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#contract">Contract</a></li>
+                        <li><a href="#details">Details</a></li>
                         <li><a href="#additionalInfo">Additional Info</a></li>
                     </ul>
                 </div>
@@ -71,21 +74,47 @@
                         <h2>783 Dorchester Avenue</h2>
                         <h3>Boston, MA 02125</h3>
                         <h4>Price 2,400/month   3 bedroom 2 bathroom</h4>
-                        <div id="map-section2"></div>
+                         <div class="jcarousel-wrapper">
+                            <div class="jcarousel">
+                                <ul>
+                                    <li><img src="img/house1.png"></li>
+                                    <li><img src="img/house2.png"></li>
+                                    <li><img src="img/house3.png"></li>
+                                    <li><img src="img/house4.png"></li>
+                                    <li><img src="img/house5.png"></li>
+                                    <li><img src="img/house6.png"></li>
+                                    <li><img src="img/house7.png"></li>
+                                </ul>
+                            </div>
+
+                            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                            
+                            <p class="jcarousel-pagination"></p>
+                        </div>
                     </div>
 
-                    <div class="listSection" id="availability">
-                        <h2>Availability</h2>
-                        <div id="moveIn">
-                            <h3>Select the Move-In Date</h3>
-                            <input id="moveInDate" name="moveInDate" readonly>
-                            <h3 id="dateH3"></h3>
+                    <div class="listSection" id="details">
+                        <h2>Details</h2>
+                        <div id="moveInDetails">
+                            <h3>Move In: September 1, 2015</h3>
+                            <h3>Move Out: August 1, 2016</h3>
                         </div>
-                        <div id="moveOut">
-                            <h3>Select the Move-Out Date</h3>
-                            <input id="moveOutDate" name="moveOutDate" readonly>
-
-                        </div>
+                        <div id="map-section2"></div>
+                        <table style="width:80%">
+                        <tr>
+                            <td>Washer / Dryer</td>
+                            <td>Dishwasher</td>
+                            <td>Storage Space</td>
+                            <td>Ceiling Fans</td>
+                        </tr>
+                        <tr>
+                            <td>Outdoor Space</td>
+                            <td>Pool</td> 
+                            <td>Porch</td>
+                            <td>Central Air</td>
+                        </tr>
+                    </table>
                     </div>
                 </div>
 
@@ -94,7 +123,7 @@
                     <h3>Derek Miller</h3>
                     <h3>781-264-8475</h3>
                     <h3><a href="mailto:derekm228@gmail.com"></a></h3>
-                    <img src="img/me.png" alt="My Picture">
+                    <img src="img/me2.jpg" alt="My Picture">
                     <ul>
                         <li><a href="mailto:derekm228@gmail.com" target="_blank">Send Email</a></li>
                         <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
@@ -125,6 +154,8 @@
         <script src="js/datepicker.js"></script>
         <script src="js/jquery-smooth-scroll.js"></script>
         <script src="ckeditor/ckeditor.js"></script>
+        <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+        <script type="text/javascript" src="js/jcarousel.basic.js"></script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
