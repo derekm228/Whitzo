@@ -21,7 +21,8 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,700,100' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8" type="text/javascript"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8&libraries=places" type="text/javascript"></script>
+
         <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 
     </head>
@@ -57,15 +58,10 @@
                 </div>
 
                 <div id="listMyApartmentContent">
-                    <div class="listSection" id="location">
+                    <div class="listSection" id="location autocomplete">
                         <h2>Location</h2>
                         <form class="listFormSection">
-                            <fieldset class="listInfo">
-                                <input type="text" id="address" placeholder="Address">
-                                <input type="text" id="apartment" placeholder="Apartment/Suite">
-                                <input type="text" id="city" placeholder="City">
-                                <input type="text" id="state" placeholder="State">
-                            </fieldset>
+                            <input type="text" id="address" placeholder="Address">
                         </form>
                         <div id="map-section"></div>
                     </div>
@@ -74,8 +70,8 @@
                         <h2>Price</h2>
                         <form class="listFormSection">
                             <fieldset class="listInfo">
-                                <input type="number" id="priceInput">
-                                <select>
+                                <input type="number" id="priceInput" placeholder="Price in $">
+                                <select id="priceFrequency">
                                     <option value="month">Week</option>
                                     <option value="month">Month</option>
                                     <option value="quarter">Quarter</option>
@@ -90,11 +86,13 @@
                         <h2>Availability</h2>
                         <div id="moveIn">
                             <h3>Select the Move-In Date</h3>
-                            <input id="moveInDate" name="moveInDate">
+                            <input id="moveInDate" name="moveInDate" readonly>
+                            <h3 id="dateH3"></h3>
                         </div>
                         <div id="moveOut">
                             <h3>Select the Move-Out Date</h3>
-                            <input id="moveOutDate" name="moveOutDate">
+                            <input id="moveOutDate" name="moveOutDate" readonly>
+
                         </div>
                     </div>
 

@@ -248,7 +248,7 @@ body {
     float: left;
     clear: none;
     height: 38px;
-    width: 50%;
+    width: 49%;
     color: #F0F0F0;
     text-align:left;
     padding-top: 6px;
@@ -280,8 +280,8 @@ body {
 .footer input[type="button"]:hover {
     border: solid 1px #707070;
     box-shadow: 0 0 5px 1px #F0F0F0;
-    transition: background 2s;
     background: #F0F0F0;
+    transition-duration: 2s;
 }
 
 /* ========================================================================== */
@@ -409,6 +409,31 @@ body {
     padding-bottom: 1%;
 }
 
+#address {
+    width: 50%;
+}
+
+#priceInput, #priceFrequency, #address {
+    padding: 8px 20px 8px 20px;
+    border: solid 1px #dcdcdc;
+    font-size: 16px;
+    color:black;
+}
+
+#priceFrequency {
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#priceInput:focus, #priceFrequency:focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #F0F0F0;
+    background: #F0F0F0;
+    transition-duration: 1s;
+}
+
 #availability {
     min-height: 370px;
 }
@@ -427,7 +452,8 @@ body {
 }
 
 #moveIn input, #moveOut input {
-    visibility: hidden;
+    background: transparent;
+    border: none;
 }
 
 #map-section {
