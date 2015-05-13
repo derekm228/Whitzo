@@ -164,9 +164,8 @@ $(document).ready(function(){
 
 	$('#contractFile').on('change', function() {
 		var filename = $('input[type=file]').val().replace(/C:\\fakepath\\/i, '')
-		
 		if (filename) {
-			$(".contractDoc").attr("src", "/ViewerJS/docs/" + filename);
+			$(".contractDoc").attr("src", "ViewerJS/docs/" + filename);
 		}
 	});
 
@@ -200,6 +199,13 @@ $(document).ready(function(){
 	$("#loginButton").on('click', function() {
     	gapi.auth.signIn(additionalParams); // Will use page level configuration
    	});
+
+/*------------------------------------------GOOGLE PLUS SIGN IN CODE------------------------------------------*/
+	
+	// Enable CKEditor
+	CKEDITOR.replace('moreInfo');
+	CKEDITOR.config.height = '35em';
+
 });
 
 

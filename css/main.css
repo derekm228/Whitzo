@@ -14,6 +14,10 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+
+    background: url(../img/home_background-min.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 /*
@@ -96,9 +100,7 @@ textarea {
 /* ========================================================================== */
 
 html {
-    background: url(../img/home_background-min.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    background-size: cover;
+    /* Taken care of up top */
 }
 
 * {
@@ -307,6 +309,21 @@ body {
     background-color: black;
 }
 
+#backHeader {
+    float: left;
+    width: 33%;
+}
+
+#centerHeader {
+    float: left;
+    width: 33%;
+}
+
+#forwardHeader {
+    float: left;
+    width: 33%;
+}
+
 #backButton {
     float: left;
     clear: none;
@@ -318,7 +335,6 @@ body {
 #backText {
     float: left;
     clear: none;
-    width: 10%;
     text-align:left;
     padding-top: 9px;
     padding-left: 10px;
@@ -326,12 +342,27 @@ body {
 }
 
 #pageTitle {
-    float: left;
+    float: center;
     clear: none;
-    width: 40%;
-    text-align:left;
+    text-align:center;
     padding-top: 9px;
-    padding-left: 27%;
+    color: #F0F0F0;
+}
+
+#submitListing {
+    float: right;
+    clear: none;
+    text-align:right;
+    padding-right: 5px;
+    padding-top: 2px;
+}
+
+#submitText {
+    float: right;
+    clear: none;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 9px;
     color: #F0F0F0;
 }
 
@@ -414,21 +445,14 @@ body {
     margin-bottom: 1%;
 }
 
-#priceInput, #priceFrequency, #address {
+#priceInput, #roomInput, #bathInput, #address {
     padding: 8px 20px 8px 20px;
     border: solid 1px #dcdcdc;
     font-size: 16px;
     color:black;
 }
 
-#priceFrequency {
-    font-size: 14px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-#priceInput:focus, #priceFrequency:focus {
+#priceInput:focus, #roomInput:focus, #bathInput:focus {
     border: solid 1px #707070;
     box-shadow: 0 0 5px 1px #F0F0F0;
     background: #F0F0F0;
