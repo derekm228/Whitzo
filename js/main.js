@@ -82,7 +82,8 @@ $(document).ready(function(){
       		{ types: ['geocode'] });
   			// When the user selects an address from the dropdown,
   			// populate the address fields in the form.
-  		google.maps.event.addListener(autocomplete, 'place_changed');
+  		google.maps.event.addListener(autocomplete, 'place_changed', function() { codeAddress()
+  		});
 	}
 
 	// Bias the autocomplete object to the user's geographical location,
