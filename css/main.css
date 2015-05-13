@@ -374,7 +374,7 @@ body {
 
 .leftSideBar {
     height: 100%;
-    width: 15%;
+    width: 10%;
     float: left;
     clear: none;
     text-align: left;
@@ -417,9 +417,7 @@ body {
     width: 75%;
     text-align: left;
     color: #F0F0F0;
-    border-left: 2px solid white;
     overflow-y: scroll;
-    padding-top: 2%;
     padding-left: 3%;
 }
 
@@ -530,6 +528,95 @@ ul .checkboxGroup li:hover, ul.checkboxGroup li.focus  {
   border: 1px gray solid; 
   width: 12em; 
 } 
+
+/* ========================================================================== */
+/* CSS specific for the Apartment Preview Page                                */
+/* ========================================================================== */
+
+#previewPageContainer {
+    height: 100%;
+    width: 100%;
+    margin: auto auto 0 auto;
+    position: fixed;
+}
+
+#previewMyApartmentContent {
+    float: left;
+    clear: none;
+    height: 100%;
+    width: 57%;
+    text-align: left;
+    color: #F0F0F0;
+    overflow-y: scroll;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#previewMyApartmentContent h2 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 44px;
+    color: #F0F0F0;
+}
+
+.contactInfo {
+    float: left;
+    clear: none;
+    height: 100%;
+    width: 15%;
+    text-align: left;
+    color: #F0F0F0;
+    border-left: 2px solid white;
+    padding-top: 1%;
+    padding-left: 3%;
+}
+
+.contactInfo h2 {
+    font-family: 'Francois One', sans-serif;
+    font-size: 44px;
+    color: #F0F0F0;
+}
+
+.contactInfo h3 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #F0F0F0;
+}
+
+.contactInfo li {
+    list-style-type: none;
+    line-height: 30px;
+    font-size: 22px;
+    font-family: 'Francois One', sans-serif;
+}
+
+.contactInfo a:link {
+    color: #839CA5;
+    text-decoration: none;
+}
+
+.contactInfo a:visited {
+    color: #839CA5;
+    text-decoration: none;
+}
+
+.contactInfo a:hover {
+    color: #F0F0F0;
+    text-decoration: none;
+}
+
+.contactInfo a:active {
+    color: #839CA5;
+    text-decoration: none;
+}
+
+#map-section2 {
+    min-height: 550px;
+    background-color: none;
+    /*min-width: 400px;
+   /* width: 100%;
+    height: 100%; */
+}
 
 
 /* ==========================================================================

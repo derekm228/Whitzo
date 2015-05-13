@@ -14,6 +14,7 @@ $(document).ready(function(){
 		};
 	
 		map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
+
 		geocoder = new google.maps.Geocoder();
 
 		// Try HTML5 geolocation
@@ -23,7 +24,7 @@ $(document).ready(function(){
 
 				var marker = new google.maps.Marker({
 					position: pos,
-					map: map
+					map: map,
 				});
 
 				map.setCenter(pos);
@@ -117,6 +118,26 @@ $(document).ready(function(){
 	  	});
 	}
 
+	function drawPreviewMap() {
+  		var previewLatitude = 42.323777;
+  		var previewLongitude = -71.056935;
+  		var mapOptions = {
+			zoom: 17,
+			scrollwheel: false
+		};
+	
+		var map2 = new google.maps.Map(document.getElementById('map-section2'), mapOptions);
+
+		var pos2 = new google.maps.LatLng(previewLatitude, previewLongitude);
+
+		var marker2 = new google.maps.Marker({
+			position: pos2,
+			map: map2,
+		});
+
+		map2.setCenter(pos2);
+	}
+
 
 	initializeAuto();
 
@@ -129,6 +150,12 @@ $(document).ready(function(){
         	console.log("Dirty");
     	}
 	});
+
+	if($("#previewMyApartmentContent").length > 0) {
+		console.log("Yes")
+		drawPreviewMap();
+	}
+
 
 /*------------------------------------------CALENDAR SPECIFIC START CODE------------------------------------------*/
 
@@ -153,7 +180,7 @@ $(document).ready(function(){
 
 	$('.leftSideBar a').on('click', function() {
     	$.smoothScroll({
-      		scrollElement: $('#listMyApartmentContent'),
+      		scrollElement: $('#listMyApartmentContent, #previewMyApartmentContent'),
       		scrollTarget: $(this).attr("href"),
       		speed: 1000
     	});
@@ -200,7 +227,7 @@ $(document).ready(function(){
     	gapi.auth.signIn(additionalParams); // Will use page level configuration
    	});
 
-/*------------------------------------------GOOGLE PLUS SIGN IN CODE------------------------------------------*/
+/*------------------------------------------RICH TEXT EDITOR------------------------------------------*/
 	
 	// Enable CKEditor
 	CKEDITOR.replace('moreInfo');

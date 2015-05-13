@@ -26,23 +26,23 @@
 
     </head>
     <body>
-        <h1 id="previewPageH1">Whitzo -- Find or list your apartments without fees and brokers</h1>
+        <h1 id="listPageH1">Whitzo -- Find or list your apartments without fees and brokers</h1>
 
         <div id="previewPageContainer">
             <div class="header">
                 <div id="backHeader">
                     <div id="backButton">
-                        <a href="index.html">
+                        <a href="listApartment.html">
                             <img src="img/back_button.png" alt="Back to Home" height="40" width="40">
                         </a>
                     </div>
                     <div id="backText">
-                        <h3>Whitzo</h3>
+                        <h3>Edit Listing</h3>
                     </div>
                 </div>
                 <div id="centerHeader">
                     <div id="pageTitle">
-                        <h3>List My Apartment</h3>
+                        <h3>Listing Preview</h3>
                     </div>
                 </div>
                 <div id="forwardHeader">
@@ -60,32 +60,18 @@
             <div class="content">
                 <div class="leftSideBar">
                     <ul>
-                        <li><a href="#location">Location</a></li>
-                        <li><a href="#keyInfo">Key Info</a></li>
-                        <li><a href="#availability">Availability</a></li>
-                        <li><a href="#amenities">Amenities</a></li>
-                        <li><a href="#pictures">Pictures</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#contract">Contract</a></li>
                         <li><a href="#additionalInfo">Additional Info</a></li>
                     </ul>
                 </div>
 
-                <div id="listMyApartmentContent">
-                    <div class="listSection" id="location">
-                        <h2>Location</h2>
-                        <input type="text" id="address" placeholder="Address">
-                        <div id="map-section"></div>
-                    </div>
-
-                    <div class="listSection" id="keyInfo">
-                        <h2>Key Information</h2>
-                        <form class="listFormSection">
-                            <fieldset class="listInfo">
-                                <input type="number" id="priceInput" placeholder="Price per month">
-                                <input type="number" id="roomInput" placeholder="Bedrooms">
-                                <input type="number" id="bathInput" placeholder="Bathrooms">
-                            </fieldset>
-                        </form>
+                <div id="previewMyApartmentContent">
+                    <div class="listSection" id="about">
+                        <h2>783 Dorchester Avenue</h2>
+                        <h3>Boston, MA 02125</h3>
+                        <h4>Price 2,400/month   3 bedroom 2 bathroom</h4>
+                        <div id="map-section2"></div>
                     </div>
 
                     <div class="listSection" id="availability">
@@ -101,65 +87,22 @@
 
                         </div>
                     </div>
-
-                    <div class="listSection" id="amenities">
-                        <h2>Amenities</h2>
-                        <form class="listFormSection">
-                            <fieldset class="listInfo">
-                                <table style="width:80%">
-                                    <tr>
-                                        <td><input type="checkbox" id="washerDryer" value="washerDryer" /><label for="washerDryer">Washer / Dryer</label></td>
-                                        <td><input type="checkbox" id="dishwasher" value="dishwasher" /><label for="dishwasher">Dishwasher</label></td> 
-                                        <td><input type="checkbox" id="utilitiesIncluded" value="utilitiesIncluded" /><label for="utilitiesIncluded">Utilities Included</label></td>
-                                        <td><input type="checkbox" id="parking" value="parking" /><label for="parking">Parking</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" id="outdoorSpace" value="outdoorSpace" /><label for="outdoorSpace">Outdoor Space</label></td>
-                                        <td><input type="checkbox" id="pool" value="pool" /><label for="pool">Pool</label></td> 
-                                        <td><input type="checkbox" id="porch" value="porch" /><label for="porch">Porch</label></td>
-                                        <td><input type="checkbox" id="centralAir" value="centralAir" /><label for="centralAir">Central Air</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" id="fitnessCenter" value="fitnessCenter" /><label for="fitnessCenter">Fitness Center</label></td>
-                                        <td><input type="checkbox" id="storageSpace" value="storageSpace" /><label for="storageSpace">Storage Space</label></td> 
-                                        <td><input type="checkbox" id="bikeFriendly" value="bikeFriendly" /><label for="bikeFriendly">Bike Friendly</label></td>
-                                        <td><input type="checkbox" id="concierge" value="concierge" /><label for="concierge">Concierge</label></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" id="petFriendly" value="petFriendly" /><label for="petFriendly">Pet Friendly</label></td>
-                                        <td><input type="checkbox" id="wifi" value="wifi" /><label for="wifi">Wi-Fi</label></td> 
-                                        <td><input type="checkbox" id="ceilingFans" value="ceilingFans" /><label for="ceilingFans">Ceiling Fans</label></td>
-                                        <td><input type="checkbox" id="fireplace" value="fireplace" /><label for="fireplace">Fireplace</label></td>
-                                    </tr>
-                                </table>
-                            </fieldset>
-                        </form>
-                    </div>
-
-                    <div class="listSection" id="pictures">
-                        <h2>Pictures</h2>
-                        <form class="listFormSection dropzone" action="file-upload">
-                        </form>
-                    </div>
-
-                    <div class="listSection" id="contract">
-                        <h2>Contract</h2>
-                        <form class="listFormSection" action="" method="post" enctype="multipart/form-data">
-                            <input id="contractFile" name="uploaded_file" type="file">
-                            <iframe class="contractDoc" src="" allowfullscreen webkitallowfullscreen></iframe>
-                        </form> 
-                    </div>
-
-                    <div class="listSection" id="additionalInfo">
-                        <h2>Additional Info</h2>
-                        <form class="listFormSection">
-                            <fieldset class="listInfo">
-                                <textarea name="moreInfo" id="moreInfo" rows="50" cols ="80"></textarea>
-                            </fieldset>
-                        </form>
-                    </div>
                 </div>
-            </div>
+
+                <div class="contactInfo">
+                    <h2>Contact Info</h2>
+                    <h3>Derek Miller</h3>
+                    <h3>781-264-8475</h3>
+                    <h3><a href="mailto:derekm228@gmail.com"></a></h3>
+                    <img src="img/me.png" alt="My Picture">
+                    <ul>
+                        <li><a href="mailto:derekm228@gmail.com" target="_blank">Send Email</a></li>
+                        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                        <li><a href="http://www.twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="http://www.google.com" target="_blank">Google +</a></li>
+                        <li><a href="http://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
 
             <div class="footer">
                 <div id="login">
