@@ -135,11 +135,10 @@
 
                     <div class="listSection" id="contract">
                         <h2>Contract</h2>
-                        <form enctype="multipart/form-data" action="upload.php" method="post">
-                            <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                            Choose a file to upload: <input name="uploaded_file" type="file" />
-                            <input type="submit" value="Upload" />
-                            <iframe class="contractDoc" src="ViewerJS/docs/Flight_Receipt.pdf" allowfullscreen webkitallowfullscreen></iframe>
+
+                        <form class="listFormSection" action="" method="post" enctype="multipart/form-data">
+                            <input id="contractFile" name="uploaded_file" type="file">
+                            <iframe class="contractDoc" src="" allowfullscreen webkitallowfullscreen></iframe>
                         </form> 
                     </div>
 

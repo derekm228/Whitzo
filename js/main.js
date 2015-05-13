@@ -56,8 +56,6 @@ $(document).ready(function(){
 	//Event listeners
 	google.maps.event.addDomListener(window, 'load', initialize);
 
-/*------------------------------------------MAPS SPECIFIC END CODE------------------------------------------*/
-
 /*------------------------------------------CALENDAR SPECIFIC START CODE------------------------------------------*/
 
 	datePickerController.createDatePicker({
@@ -75,8 +73,6 @@ $(document).ready(function(){
     nopopup: true
 });
 
-/*------------------------------------------CALENDAR SPECIFIC END CODE------------------------------------------*/
-
 /*------------------------------------------ANIMATE SCROLLING WHEN SELECTING LINKS------------------------------------------*/
 
 	$('.leftSideBar a').on('click', function() {
@@ -88,4 +84,17 @@ $(document).ready(function(){
     	return false;
   	});
 
+/*------------------------------------------GET NAME OF FILE AND FEED IT TO THE IFRAME SRC------------------------------------------*/
+
+	$('#contractFile').on('change', function() {
+		var filename = $('input[type=file]').val().replace(/C:\\fakepath\\/i, '')
+		
+		if (filename) {
+			$(".contractDoc").attr("src", filename);
+		}
+	});
+
 });
+
+
+
