@@ -90,7 +90,7 @@ $(document).ready(function(){
 		var filename = $('input[type=file]').val().replace(/C:\\fakepath\\/i, '')
 		
 		if (filename) {
-			$(".contractDoc").attr("src", filename);
+			$(".contractDoc").attr("src", "/ViewerJS/docs/" + filename);
 		}
 	});
 
