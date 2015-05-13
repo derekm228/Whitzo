@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	//Initialize global variables
 	var map;
+	var geocoder;
 
 	//Define functions
 	function initialize() {
@@ -13,6 +14,7 @@ $(document).ready(function(){
 		};
 	
 		map = new google.maps.Map(document.getElementById('map-section'), mapOptions);
+		geocoder = new google.maps.Geocoder();
 
 		// Try HTML5 geolocation
 		if(navigator.geolocation) {
@@ -63,6 +65,14 @@ $(document).ready(function(){
 	// of the Google Places API to help users fill in the information.
 
 	var placeSearch, autocomplete;
+	var componentForm = {
+	 	street_number: 'short_name',
+		route: 'long_name',
+		locality: 'long_name',
+		administrative_area_level_1: 'short_name',
+		country: 'long_name',
+		postal_code: 'short_name'
+	};
 
 	function initializeAuto() {
   		// Create the autocomplete object, restricting the search
@@ -90,9 +100,34 @@ $(document).ready(function(){
 	 	}
 	}
 
+	function codeAddress() {
+  		var address = document.getElementById('address').value;
+  		geocoder.geocode( { 'address': address}, function(results, status) {
+	    	if (status == google.maps.GeocoderStatus.OK) {
+	      		map.setCenter(results[0].geometry.location);
+	      		var marker = new google.maps.Marker({
+	          		map: map,
+	          		position: results[0].geometry.location
+	      		});
+	    	} 
+	    	else {
+	      		alert('Geocode was not successful for the following reason: ' + status);
+	    	}
+	  	});
+	}
+
+
 	initializeAuto();
 
 	$("#address").on('focus', geolocate);
+
+	$("#address").keyup(function(e){
+    	if(e.keyCode == 13)
+    	{
+        	codeAddress();
+        	console.log("Dirty");
+    	}
+	});
 
 /*------------------------------------------CALENDAR SPECIFIC START CODE------------------------------------------*/
 

@@ -411,6 +411,7 @@ body {
 
 #address {
     width: 50%;
+    margin-bottom: 1%;
 }
 
 #priceInput, #priceFrequency, #address {
