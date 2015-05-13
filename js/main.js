@@ -122,7 +122,9 @@ $(document).ready(function(){
 	  }
 	}
 
-
+	$("#loginButton").on('click', function() {
+    	gapi.auth.signIn(additionalParams); // Will use page level configuration
+   	});
 });
 
 
