@@ -6,6 +6,10 @@
         <title>Whitzo</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-signin-clientid" content="CLIENT_ID" />
+        <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
+        <meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
+        <meta name="google-signin-cookiepolicy" content="single_host_origin" />
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -18,13 +22,7 @@
         <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8" type="text/javascript"></script>
-        
-        <meta name="google-signin-clientid" content="CLIENT_ID" />
-        <meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login" />
-        <meta name="google-signin-requestvisibleactions" content="http://schema.org/AddAction" />
-        <meta name="google-signin-cookiepolicy" content="single_host_origin" />
-
-        <button id="signinButton">Sign in with Google</button>
+        <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 
     </head>
     <body>
@@ -196,39 +194,6 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-        <script src="https://apis.google.com/js/client:platform.js?onload=render" async defer>
-         /* Executed when the APIs finish loading */
-         function render() {
-         function signinCallback(authResult) {
-  if (authResult['status']['signed_in']) {
-    // Update the app to reflect a signed in user
-    // Hide the sign-in button now that the user is authorized, for example:
-    document.getElementById('signinButton').setAttribute('style', 'display: none');
-  } else {
-    // Update the app to reflect a signed out user
-    // Possible error values:
-    //   "user_signed_out" - User is signed-out
-    //   "access_denied" - User denied access to your app
-    //   "immediate_failed" - Could not automatically log in the user
-    console.log('Sign-in state: ' + authResult['error']);
-  }
-}
-           // Additional params including the callback, the rest of the params will
-           // come from the page-level configuration.
-           var additionalParams = {
-             'callback': signinCallback
-           };
-
-           // Attach a click listener to a button to trigger the flow.
-           var signinButton = document.getElementById('signinButton');
-           signinButton.addEventListener('click', function() {
-            console.log("Click");
-             gapi.auth.signIn(additionalParams); // Will use page level configuration
-           });
-         }
-
-
         </script>
 
     </body>
