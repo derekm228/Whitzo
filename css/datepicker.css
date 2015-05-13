@@ -88,7 +88,7 @@
 .date-picker
     {
     position:absolute;
-    z-index:9999;
+    z-index:0;
     text-align:center;
     /* 
     Change the font-size to suit your needs. The following line is for the demo
@@ -145,7 +145,7 @@
     {
     position:absolute;
     background:#fff;
-    z-index:9998;
+    z-index:0;
     padding:0;
     margin:0;
     border:0;
