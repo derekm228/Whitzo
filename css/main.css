@@ -570,6 +570,10 @@ ul .checkboxGroup li:hover, ul.checkboxGroup li.focus  {
     padding-left: 3%;
 }
 
+table {
+    width: 80%;
+}
+
 .contactInfo h2 {
     font-family: 'Francois One', sans-serif;
     font-size: 2em;
