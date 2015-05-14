@@ -2,8 +2,9 @@
     margin: 20px auto;
     position: relative;
     border: 10px solid #fff;
-    width: 98%%;
-    min-height: 550px;
+    width: 39em;
+    height: auto;
+    min-height: 25em;
     -webkit-border-radius: 5px;
        -moz-border-radius: 5px;
             border-radius: 5px;

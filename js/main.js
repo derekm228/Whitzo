@@ -232,7 +232,7 @@ $(document).ready(function(){
 	// Enable CKEditor
 	if($("#listMyApartmentContent").length > 0) {
 		CKEDITOR.replace('moreInfo');
-		CKEDITOR.config.height = '35em';
+		CKEDITOR.config.height = '25em';
 	}
 
 
