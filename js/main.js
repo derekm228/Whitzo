@@ -159,22 +159,23 @@ $(document).ready(function(){
 
 /*------------------------------------------CALENDAR SPECIFIC START CODE------------------------------------------*/
 
-	datePickerController.createDatePicker({
-    	formElements: {
-        	"moveInDate": "%m/%d/%Y"
-    	},
-    	// Position the activation button within the span
-    	nopopup: true
-	});
-	
-	datePickerController.createDatePicker({
-    	formElements: {
-        	"moveOutDate": "%m/%d/%Y"
-    	},
-    	// Position the activation button within the span
-    	nopopup: true
-	});
-
+	if($("#listSection").length > 0) {
+		datePickerController.createDatePicker({
+	    	formElements: {
+	        	"moveInDate": "%m/%d/%Y"
+	    	},
+	    	// Position the activation button within the span
+	    	nopopup: true
+		});
+		
+		datePickerController.createDatePicker({
+	    	formElements: {
+	        	"moveOutDate": "%m/%d/%Y"
+	    	},
+	    	// Position the activation button within the span
+	    	nopopup: true
+		});
+	}
 
 /*------------------------------------------ANIMATE SCROLLING WHEN SELECTING LINKS------------------------------------------*/
 
