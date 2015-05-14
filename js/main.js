@@ -159,7 +159,7 @@ $(document).ready(function(){
 
 /*------------------------------------------CALENDAR SPECIFIC START CODE------------------------------------------*/
 
-	if($("#listSection").length > 0) {
+	if($(".listSection").length > 0) {
 		datePickerController.createDatePicker({
 	    	formElements: {
 	        	"moveInDate": "%m/%d/%Y"
